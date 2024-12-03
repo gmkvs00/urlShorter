@@ -22,7 +22,8 @@ async function handleGenerateNewShortUrl(req,res){
         return res.status(404).json({ error: "Short URL not found" });
      }
 
-     return res.json({totalClicks:result.visitHistory.length,analytics:result.visitHistory});
+     return res.json({totalClicks:result.visitHistory.length,
+        analytics:result.visitHistory});
 }
 
 module.exports={
